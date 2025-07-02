@@ -1,7 +1,8 @@
 // type Props = {};
 "use client";
+
 import Button from "@/app/components/Button";
-import { UserIconSolid } from "@/app/components/icons";
+import { CameraIconSolid } from "@/app/components/icons";
 import { useRef } from "react";
 
 function ProfileHeader() {
@@ -11,35 +12,33 @@ function ProfileHeader() {
     <section className=" py-5">
       <div className="grid wrapper gap-4">
         {/* image */}
-        <div className="grid grid-cols-[auto_1fr] gap-2 items-center">
-          <div className="flex items-start justify-start bg-red-400 ">
-            <button
-              className="rounded-full cursor-pointer "
-              onClick={() => hiddenFileInputRef.current?.click()}
-            >
-              <UserIconSolid className="size-20 text-gray-200" />
-            </button>
+        <div className="grid grid-cols-[auto_1fr] gap-4 items-center">
+          <button
+            className="rounded-full cursor-pointer bg-slate-100 size-20 flex items-center justify-center"
+            onClick={() => hiddenFileInputRef.current?.click()}
+          >
+            <CameraIconSolid className="size-7 text-gray-300" />
             <input type="file" ref={hiddenFileInputRef} hidden />
-          </div>
+          </button>
 
           {/* following */}
           <div className="space-y-2">
-            <p className="text-sm font-semibold  ">Lana Kane</p>
+            <p className="text-sm font-semibold">Lana Kane</p>
 
-            <div className="grid grid-cols-3 gap-2 ">
+            <div className="flex gap-8 ">
               <p className="text-sm flex flex-col">
                 <span className="font-semibold">424</span>
-                <span className="text-sm">posts</span>
+                <span className="text-xs">posts</span>
               </p>
 
               <p className="text-sm flex flex-col">
                 <span className="font-semibold">260K</span>
-                <span className="text-sm">followers</span>
+                <span className="text-xs">followers</span>
               </p>
 
               <p className="text-sm flex flex-col">
                 <span className="font-semibold">505</span>
-                <span className="text-sm">following</span>
+                <span className="text-xs">following</span>
               </p>
             </div>
           </div>
@@ -48,22 +47,23 @@ function ProfileHeader() {
         {/* bio */}
         <div>
           <p className="text-sm font-semibold">Lana Kane</p>
-          <p className="text-sm">Agent</p>
 
-          <p className="text-sm">
-            International Secret Intelligence Service (ISIS).
-          </p>
+          <p className="text-sm">International Secret Intelligence Service.</p>
 
           {/* interests */}
           <p className="text-sm">
-            <span className="text-sm">
-              Espionage, International Relations, and Coffee.
-            </span>
+            <span className="text-sm">Espionage, International Relations.</span>
+          </p>
+
+          <p className="text-xs mt-3">
+            Followed by <span className="font-semibold">sterling archer</span>,
+            <span className="font-semibold">malory archer</span> + 48 more
           </p>
         </div>
 
-        <div>
+        <div className="grid grid-cols-2 gap-4">
           <Button label="Edit Profile" className="bg-slate-100" />
+          <Button label="Share Profile" className="bg-slate-100" />
         </div>
       </div>
     </section>

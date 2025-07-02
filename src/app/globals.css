@@ -12,7 +12,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
   /* --font-mono: var(--font-geist-mono); */
-  --text-sm: 0.9rem;
+  /* --text-sm: 0.9rem; */
 }
 
 @media (prefers-color-scheme: dark) {

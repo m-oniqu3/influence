@@ -1,9 +1,9 @@
 import {
+  CreateIcon,
   ExploreIcon,
   HeartIcon,
   HomeIcon,
   LogoIcon,
-  NewIcon,
   SearchIcon,
   UserIcon,
 } from "@/app/components/icons";
@@ -22,7 +22,7 @@ function Sidebar() {
           <SidebarItem icon={<SearchIcon />} label="Search" />
           <SidebarItem icon={<ExploreIcon />} label="Explore" />
           <SidebarItem icon={<HeartIcon />} label="Notifications" />
-          <SidebarItem icon={<NewIcon />} label="Create" />
+          <SidebarItem icon={<CreateIcon />} label="Create" />
           <SidebarItem icon={<UserIcon />} label="Profile" />
         </div>
       </div>
