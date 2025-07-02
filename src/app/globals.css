@@ -4,14 +4,14 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: oklch(37% 0.013 285.805);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  /* --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,7 +24,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 
@@ -39,5 +39,18 @@ body {
 @layer components {
   .wrapper {
     @apply w-[92%] mx-auto md:w-[96%]
+  }
+
+
+  .sidebar-link {
+    @apply flex gap-6 items-center justify-center text-sm font-medium capitalize cursor-pointer w-full p-[6px] md:px-3 md:justify-start
+  }
+
+  .sidebar-link:hover {
+    @apply bg-slate-50 dark:bg-gray-800 rounded-lg w-full;
+  }
+
+  .sidebar-link span {
+    @apply hidden md:inline-block;
   }
 }

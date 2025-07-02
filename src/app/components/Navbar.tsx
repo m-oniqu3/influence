@@ -1,4 +1,4 @@
-import { LogoIcon, NotificationIcon } from "@/app/components/icons";
+import { HeartIcon, LogoIcon } from "@/app/components/icons";
 import Searchbar from "@/app/components/Searchbar";
 
 function Navbar() {
@@ -9,7 +9,7 @@ function Navbar() {
 
         <Searchbar />
 
-        <NotificationIcon />
+        <HeartIcon />
       </nav>
     </header>
   );
